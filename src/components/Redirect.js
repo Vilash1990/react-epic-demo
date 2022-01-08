@@ -5,7 +5,7 @@ import { getAccessToken } from "../modules/fhir-auth.js";
 import { toggleExampleVisibility } from "../modules/fhir-data.js";
 import { Icon, Message, Divider, Button, Container } from "semantic-ui-react";
 import Grid from "./Grid.js";
-import MedflowHome from "./MedflowHome.jsx";
+import MedflowHome from "./MedflowHome"
 
 const mapStateToProps = (state, ownProps) => ({
   fhirAuth: state.fhirAuth,
@@ -43,7 +43,7 @@ class Redirect extends Component {
       );
     }
 
-    return <div><MedflowHome fhirData={this.props.fhirData} /><Grid /></div>;
+    return <><Grid /> <MedflowHome/></>;
   }
 }
 
